@@ -1,48 +1,49 @@
 # Jobs Scraper Mobile Application
 
-Aplikasi Jobs Scraper Mobile ini dikembangkan menggunakan React Native untuk memungkinkan pengguna mencari dan melihat lowongan pekerjaan dari berbagai situs job portal terkemuka di Indonesia.
+The Jobs Scraper Mobile application was developed using React Native to allow users to search and view job vacancies from various leading job portal sites in Indonesia.
 
-## Teknologi yang Digunakan
+## Technology Used
 
-- **Bahasa Pemrograman:**
-  - JavaScript/TypeScript
+- **Programming language:**
+   - JavaScript/TypeScript
 - **Framework:**
-  - React Native dengan Expo untuk pengembangan lintas platform (Android dan iOS)
-- **API:**
-  - Menggunakan FastAPI yang telah dikembangkan untuk backend
+   - React Native with Expo for cross-platform development (Android and iOS)
+- **FIRE:**
+   - Using FastAPI which has been developed for the backend
 - **State Management:**
-  - Redux
+   - Redux
 
-## Fitur Utama
+## Main feature
 
 1. **Job Scraping:**
-   - Mengumpulkan data lowongan pekerjaan dari berbagai job portal seperti jobstreet.co.id, karir.com, kalibrr.com, dan linkedin.com.
-   - Data disimpan dalam MongoDB dan diakses melalui API yang dibuat melalui FastAPI.
+    - Collecting job vacancy data from various job portals such as jobstreet.co.id, careers.com, kalibrr.com, and linkedin.com.
+    - Data is stored in MongoDB and accessed via an API created via FastAPI.
 
-2. **API Server:**
-   - Menyediakan endpoint untuk mengakses data lowongan pekerjaan.
+2. **Server API:**
+    - Provides an endpoint to access job vacancy data.
 
 3. **Mobile Client:**
-   - Menampilkan data lowongan pekerjaan dari API.
-   - Fitur pencarian dan filter lowongan pekerjaan.
+    - Displays job vacancy data from the API.
+    - Job vacancy search and filter feature.
 
-## Instalasi dan Menjalankan Aplikasi
+## Installing and Running Applications
 
-### Prasyarat
-Pastikan Anda telah menginstal Node.js, npm atau yarn, dan Expo CLI.
+### Prerequisite
+
+Make sure you have Node.js, npm or yarn, and Expo CLI installed.
 
 1. **Clone Repository:**
-   ```sh
-   git clone https://github.com/ahmadrafidev/jobs-scraper-mobile
-   cd jobs-scraper-mobile
-   ```
+    ```sh
+    git clone https://github.com/ahmadrafidev/jobs-scraper-mobile
+    cd jobs-scraper-mobile
+    ```
 
 2. **Run the application:**
-    ```sh
-    npx expo start
-    ```
+     ```sh
+     npx expo start
+     ```
 
 **Note:**
 
-1. Service backend dan juga scraper yang merupakan salah satu fitur aplikasi ini bisa dibaca di repository: [Jobs Scraper Backend](https://github.com/ahmadrafidev/jobs-scraper-backend)
-2. Service web client yang menghandle interaksi pengguna lewat website dapat diakses melalui repository: [Jobs Scraper Web](https://github.com/ahmadrafidev/jobs-scraper-web)
+1. The backend service and scraper, which is one of the features of this application, can be read in the repository: [Jobs Scraper Backend](https://github.com/ahmadrafidev/jobs-scraper-backend)
+2. The web client service that handles user interaction via the website can be accessed via the repository: [Jobs Scraper Web](https://github.com/ahmadrafidev/jobs-scraper-web)
