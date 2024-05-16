@@ -1,25 +1,27 @@
-// screens/JobListScreen.js
 import React from 'react';
-import { View, Text, FlatList } from 'react-native';
+import { FlatList, View } from 'react-native';
+import JobItem from './JobItem';
 
-const JobListScreen = ({ route }) => {
-    const { query } = route.params;
+const jobs = [
+    { id: '1', title: 'Software Developer', company: 'Tech Solutions', location: 'San Francisco, CA' },
+    { id: '2', title: 'Web Designer', company: 'Creative Studios', location: 'New York, NY' },
+];
 
-    const jobs = [
-        { id: '1', title: 'Software Developer', company: 'Tech Inc' }
-    ];
+const JobListScreen = ({ navigation }) => {
+    const handlePressJob = (job) => {
+        navigation.navigate('JobDetails', { job });
+    };
 
     return (
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            <Text>Search Query: {query}</Text>
+        <View style={{ flex: 1 }}>
             <FlatList
                 data={jobs}
                 keyExtractor={item => item.id}
                 renderItem={({ item }) => (
-                    <View>
-                        <Text>{item.title}</Text>
-                        <Text>{item.company}</Text>
-                    </View>
+                    <JobItem 
+                        job={item} 
+                        onPress={() => handlePressJob(item)}
+                    />
                 )}
             />
         </View>
